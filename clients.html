@@ -1,63 +1,75 @@
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Clients — Val Maizelev</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap
+  styles.css
 </head>
 <body>
+
+  <!-- Top Navigation -->
   <header class="nav-bar">
     <div class="container topnav">
-      <a href="index.html" class="brand">Val Maizelev</a>
+      index.htmlVal Maizelev</a>
       <nav>
-        <a href="index.html">Overview</a>
-        <a href="projects.html">Projects</a>
-        <a href="clients.html">Clients</a>
-        <a href="resume.html">Resume</a>
+        index.htmlOverview</a>
+        projects.htmlProjects</a>
+        clients.htmlClients</a>
+        resume.htmlResume</a>
       </nav>
       <button id="theme-toggle" class="btn theme-toggle" aria-label="Toggle dark mode">☀️ / 🌙</button>
     </div>
   </header>
 
+  <!-- Single, correct Clients section -->
+  <main class="container" style="padding:60px 0">
+    <h1 class="section-title" style="margin-bottom:24px">Clients</h1>
 
-<main class="container" style="padding:60px 0">
-  <h1 class="section-title" style="margin-bottom:24px">Clients</h1>
-  <div class="client-logos">
-    assets/logos/at-t_light.svg
-    assets/logos/bombardier-recreational-products-brp_light.svg
-    assets/logos/canada-post-innovapost_light.svg
-    assets/logos/canadian-tire_light.svg
-    assets/logos/chrysler_light.svg
-    assets/logos/cibc_light.svg
-    assets/logos/ford-credit_light.svg
-    assets/logos/frito-lay-pepsico_light.svg
-    assets/logos/glaxosmithkline-gsk_light.svg
-    assets/logos/independent-electricity-system-operator-ieso-opa_light.svg
-    assets/logos/kpmg_light.svg
-    assets/logos/lands-end_light.svg
-    assets/logos/manulife_light.svg
-    assets/logos/ministry-of-children-community-and-social-services-mccss_light.svg
-    assets/logos/ontario-lottery-gaming-corporation-olg_light.svg
-    assets/logos/rbc_light.svg
-    assets/logos/rogers_light.svg
-    assets/logos/shoppers-drug-mart-sdm_light.svg
-    assets/logos/toronto-transit-commission-ttc_light.svg
-    assets/logos/vale_light.svg
-    assets/logos/workplace-safety-and-insurance-board-wsib_light.svg
-  </div>
-</main>
-
+    <div class="client-logos">
+      assets/logos/at-t_light.svg
+      assets/logos/bombardier-recreational-products-brp_light.svg
+      assets/logos/canada-post-innovapost_light.svg
+      assets/logos/canadian-tire_light.svg
+      assets/logos/chrysler_light.svg
+      assets/logos/cibc_light.svg
+      assets/logos/ford-credit_light.svg
+      assets/logos/frito-lay-pepsico_light.svg
+      assets/logos/glaxosmithkline-gsk_light.svg
+      assets/logos/independent-electricity-system-operator-ieso-opa_light.svg
+      assets/logos/kpmg_light.svg
+      assets/logos/lands-end_light.svg
+      assets/logos/manulife_light.svg
+      assets/logos/ministry-of-children-community-and-social-services-mccss_light.svg
+      assets/logos/ontario-lottery-gaming-corporation-olg_light.svg
+      assets/logos/rbc_light.svg
+      assets/logos/rogers_light.svg
+      assets/logos/shoppers-drug-mart-sdm_light.svg
+      assets/logos/toronto-transit-commission-ttc_light.svg
+      assets/logos/vale_light.svg
+      assets/logos/workplace-safety-and-insurance-board-wsib_light.svg
+    </div>
+  </main>
 
   <footer class="site-footer">
-    <div class="container"><p>© <span id="year"></span> Val Maizelev</p></div>
+    <div class="container">
+      <p>© <span id="year"></span> Val Maizelev</p>
+    </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    const html = document.documentElement; const btn = document.getElementById('theme-toggle');
-    if(btn){ btn.addEventListener('click', ()=>{ const d=html.getAttribute('data-theme')==='dark'; if(d) html.removeAttribute('data-theme'); else html.setAttribute('data-theme','dark'); });}
+    const html = document.documentElement;
+    const btn = document.getElementById('theme-toggle');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        const isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) html.removeAttribute('data-theme');
+        else html.setAttribute('data-theme', 'dark');
+      });
+    }
   </script>
 </body>
 </html>
