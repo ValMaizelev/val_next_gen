@@ -137,3 +137,17 @@ body{
   filter: drop-shadow(0 0 12px rgba(200, 220, 255, 0.55));
 }
 
+.client-logos img {
+  height: 55px;
+  opacity: 0.90;
+  transition: 0.25s ease;
+  filter: drop-shadow(0 0 6px rgba(180, 200, 255, 0.35));
+  margin: 4px 10px;
+}
+.client-logos img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 12px rgba(200, 220, 255, 0.55));
+}
+
+
