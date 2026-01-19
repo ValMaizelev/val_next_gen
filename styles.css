@@ -1,0 +1,123 @@
+/* Base tokens */
+:root{
+  --bg:#03060f;
+  --text:#dce9ff; --soft:#a9c7ff;
+  --accent:#2384ff; --accent-2:#4ca2ff;
+  --panel:rgba(20,30,55,.55); --stroke:rgba(120,160,255,.32);
+}
+:root[data-theme="dark"]{
+  --bg:#03060f; --text:#dce9ff; --soft:#b8d2ff;
+  --accent:#4ca2ff; --accent-2:#78b8ff; --panel:rgba(20,30,55,.6); --stroke:rgba(120,160,255,.38);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+a{color:inherit}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* Nav */
+.nav-bar{position:sticky;top:0;z-index:10;background:rgba(3,6,15,.7);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
+.topnav{display:flex;align-items:center;gap:20px;padding:14px 0}
+.topnav .brand{font-weight:800;letter-spacing:.3px;text-decoration:none}
+.topnav nav{display:flex;gap:16px}
+.topnav nav a{text-decoration:none;padding:8px 12px;border-radius:10px;transition:.25s ease}
+.topnav nav a:hover{background:rgba(255,255,255,.06);box-shadow:0 0 12px rgba(35,132,255,.35)}
+.btn{border:1px solid var(--accent);padding:8px 14px;border-radius:10px;background:transparent;color:var(--text);cursor:pointer}
+.theme-toggle{margin-left:auto}
+
+/* Cosmic background */
+body{
+  background:
+    radial-gradient(circle at 40% 18%, rgba(40,90,170,.35), transparent 55%),
+    radial-gradient(circle at 78% 62%, rgba(32,118,255,.25), transparent 60%),
+    var(--bg);
+}
+
+/* Hero */
+.hero{padding:60px 0}
+.hero__inner{display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.hero-left{max-width:50%}
+.hero-name{
+  font-family:"Brush Script MT","Lucida Handwriting",cursive;
+  font-size:clamp(3rem,6vw,5rem);line-height:1;color:var(--soft);
+  text-shadow:0 0 18px rgba(80,140,255,.65);margin:0;
+}
+.hero-title{margin-top:10px;font-size:clamp(1.25rem,2vw,1.8rem);font-weight:400;color:#88aee8}
+.hero-text{margin-top:18px;max-width:560px}
+.hero-buttons{margin-top:20px;display:flex;gap:12px}
+.primary{background:var(--accent);color:#fff;box-shadow:0 0 12px rgba(35,132,255,.55)}
+.primary:hover{background:var(--accent-2);box-shadow:0 0 18px rgba(35,132,255,.75)}
+.secondary{border-color:#2d80ff}
+.secondary:hover{background:rgba(20,60,120,.4);box-shadow:0 0 14px rgba(35,132,255,.6)}
+.hero-right{width:40%;display:flex;justify-content:center}
+.profile-photo{
+  width:340px;height:340px;object-fit:cover;border-radius:50%;
+  border:4px solid rgba(120,170,255,.35);
+  box-shadow:0 0 22px rgba(70,130,255,.65),0 0 60px rgba(40,100,255,.35);
+  animation:fadeIn 1.2s ease
+}
+@keyframes fadeIn{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+
+/* Sections */
+.section-title{
+  font-family:"Brush Script MT","Lucida Handwriting",cursive;
+  font-size:clamp(2.2rem,4vw,3.2rem);
+  color:var(--soft);margin:0 0 34px;text-shadow:0 0 14px rgba(70,140,255,.45)
+}
+
+/* How I Work */
+.how-i-work{padding:80px 0}
+.workflow{display:flex;gap:28px}
+.workflow-step{
+  flex:1;background:var(--panel);padding:22px;border-radius:14px;
+  border:1px solid var(--stroke);box-shadow:0 0 20px rgba(25,80,175,.25);backdrop-filter:blur(4px)
+}
+.workflow-step h3{margin:.25rem 0 .6rem;color:#8fbaff}
+
+/* Project Gallery */
+.project-gallery{padding:80px 0}
+.project-grid{display:flex;gap:24px;flex-wrap:wrap}
+.project-card{
+  flex:1 1 320px;background:rgba(20,25,40,.55);border-radius:16px;padding:16px;
+  border:1px solid rgba(110,150,255,.35);box-shadow:0 0 25px rgba(60,120,255,.35);transition:.25s
+}
+.project-card:hover{transform:translateY(-6px);box-shadow:0 0 40px rgba(80,140,255,.55)}
+.project-card img{width:100%;border-radius:12px;margin-bottom:12px;display:block}
+.project-card h3{text-align:center;color:#bcd5ff;font-weight:600;margin:0}
+
+/* Skills */
+.skills-section{padding:80px 0}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.skills-grid span{
+  background:var(--panel);padding:14px 16px;border-radius:10px;text-align:center;
+  color:#d5e4ff;border:1px solid var(--stroke);box-shadow:0 0 14px rgba(70,110,255,.25)
+}
+
+/* Experience */
+.experience-section{padding:80px 0}
+.timeline{border-left:2px solid rgba(110,150,255,.4);padding-left:32px}
+.timeline-item{margin-bottom:32px}
+.timeline-item h3{color:#9cc6ff}
+.timeline-date{color:#6f8ac2;margin:4px 0 8px}
+
+/* Clients */
+.clients-section{padding:80px 0}
+.client-logos{display:flex;gap:40px;align-items:center;filter:drop-shadow(0 0 10px rgba(120,160,255,.35))}
+.client-logos img{height:55px;opacity:.85;transition:.25s}
+.client-logos img:hover{opacity:1;transform:scale(1.05)}
+
+/* Footer */
+.site-footer{padding:40px 0;text-align:center;color:#9ab0e8;border-top:1px solid rgba(255,255,255,.06);background:rgba(3,6,15,.6)}
+
+/* Responsive */
+@media (max-width: 980px){
+  .hero__inner{flex-direction:column;text-align:center}
+  .hero-left{max-width:720px}
+  .hero-right{width:100%}
+  .profile-photo{width:260px;height:260px}
+  .workflow{flex-direction:column}
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width: 560px){
+  .profile-photo{width:220px;height:220px}
+  .skills-grid{grid-template-columns:1fr}
+}

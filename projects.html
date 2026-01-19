@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Val Maizelev</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav-bar">
+    <div class="container topnav">
+      <a href="index.html" class="brand">Val Maizelev</a>
+      <nav>
+        <a href="index.html">Overview</a>
+        <a href="projects.html">Projects</a>
+        <a href="clients.html">Clients</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+      <button id="theme-toggle" class="btn theme-toggle" aria-label="Toggle dark mode">☀️ / 🌙</button>
+    </div>
+  </header>
+
+  <main class="container" style="padding:60px 0">
+    <h1 class="section-title" style="margin-bottom:24px">Projects</h1>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="assets/gallery/dashboard_exec.png" alt="Executive KPI Dashboard">
+        <h3>Executive KPI Dashboard</h3>
+      </div>
+      <div class="project-card">
+        <img src="assets/gallery/dashboard_elasticity.png" alt="Pricing Elasticity Analysis">
+        <h3>Pricing Elasticity Analysis</h3>
+      </div>
+      <div class="project-card">
+        <img src="assets/gallery/dashboard_geo.png" alt="Geo Performance">
+        <h3>Geo Performance</h3>
+      </div>
+      <div class="project-card">
+        <img src="assets/gallery/dashboard_forecast.png" alt="Forecast vs Actuals">
+        <h3>Forecast vs Actuals</h3>
+      </div>
+      <div class="project-card">
+        <img src="assets/gallery/dashboard_margin.png" alt="Margin Decomposition">
+        <h3>Margin Decomposition</h3>
+      </div>
+      <div class="project-card">
+        <img src="assets/gallery/dashboard_segments.png" alt="Customer Segments">
+        <h3>Customer Segments</h3>
+      </div>
+      <div class="project-card">
+        <img src="assets/gallery/arch_lakehouse_layers.png" alt="Lakehouse Layers">
+        <h3>Lakehouse Layers</h3>
+      </div>
+      <div class="project-card">
+        <img src="assets/gallery/arch_semantic_layer.png" alt="Semantic Layer">
+        <h3>Semantic Layer</h3>
+      </div>
+      <div class="project-card">
+        <img src="assets/gallery/arch_pipeline_etl.png" alt="Pipelines / ETL / CDC">
+        <h3>Pipelines / ETL / CDC</h3>
+      </div>
+      <div class="project-card">
+        <img src="assets/gallery/arch_ai_ready.png" alt="AI Readiness">
+        <h3>AI Readiness</h3>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>© <span id="year"></span> Val Maizelev</p></div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const html = document.documentElement; const btn = document.getElementById('theme-toggle');
+    if(btn){ btn.addEventListener('click', ()=>{ const d=html.getAttribute('data-theme')==='dark'; if(d) html.removeAttribute('data-theme'); else html.setAttribute('data-theme','dark'); });}
+  </script>
+</body>
+</html>

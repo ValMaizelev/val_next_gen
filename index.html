@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Val Maizelev — Information & Data Architecture</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav-bar">
+    <div class="container topnav">
+      <a href="index.html" class="brand">Val Maizelev</a>
+      <nav>
+        <a href="index.html">Overview</a>
+        <a href="projects.html">Projects</a>
+        <a href="clients.html">Clients</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+      <button id="theme-toggle" class="btn theme-toggle" aria-label="Toggle dark mode">☀️ / 🌙</button>
+    </div>
+  </header>
+
+  <section class="hero cosmic-hero">
+    <div class="container hero__inner">
+      <div class="hero-left">
+        <h1 class="hero-name">Val Maizelev</h1>
+        <h2 class="hero-title">Information &amp; Data Architecture</h2>
+        <p class="hero-text">I help organizations design data‑driven foundations, architecture, governance, and analytics — that scale.</p>
+        <div class="hero-buttons">
+          <a href="projects.html" class="btn primary">View Projects</a>
+          <a href="clients.html"  class="btn secondary">Clients</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img class="profile-photo" src="val-profile.png" alt="Profile photo" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="how-i-work container">
+      <h2 class="section-title">How I Work</h2>
+      <div class="workflow">
+        <div class="workflow-step">
+          <h3>Discover</h3>
+          <p>Understand the business, data landscape, pain points, and goals.</p>
+        </div>
+        <div class="workflow-step">
+          <h3>Model</h3>
+          <p>Design scalable architecture, governance, lineage, and data models.</p>
+        </div>
+        <div class="workflow-step">
+          <h3>Deliver</h3>
+          <p>Implement analytics and automation that deliver measurable value.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-gallery container">
+      <h2 class="section-title">Project Gallery</h2>
+      <div class="project-grid">
+        <a class="project-card" href="projects.html">
+          <img src="assets/gallery/dashboard_exec.png" alt="Executive KPI Dashboard">
+          <h3>Executive KPI Dashboard</h3>
+        </a>
+        <a class="project-card" href="projects.html">
+          <img src="assets/gallery/dashboard_elasticity.png" alt="Pricing Elasticity Analysis">
+          <h3>Pricing Elasticity Analysis</h3>
+        </a>
+        <a class="project-card" href="projects.html">
+          <img src="assets/gallery/dashboard_forecast.png" alt="Forecast vs Actuals">
+          <h3>Forecast vs Actuals</h3>
+        </a>
+      </div>
+    </section>
+
+    <section class="skills-section container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <span>Data Architecture</span>
+        <span>Solution Architecture</span>
+        <span>Governance &amp; Lineage</span>
+        <span>ETL / ELT Pipelines</span>
+        <span>Azure</span>
+        <span>Databricks</span>
+        <span>Power BI</span>
+        <span>Snowflake</span>
+        <span>SQL / DAX</span>
+        <span>Modeling (Dimensional / Lakehouse)</span>
+      </div>
+    </section>
+
+    <section class="experience-section container">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Senior IT Architect</h3>
+          <p class="timeline-date">2019 – Present</p>
+          <p>Architecting enterprise solutions across data platforms, analytics, and governance.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Data Solutions Architect</h3>
+          <p class="timeline-date">2014 – 2019</p>
+          <p>Designed BI models, lakehouse structures, and analytics pipelines.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="clients-section container">
+      <h2 class="section-title">Clients</h2>
+      <div class="client-logos">
+        <img src="assets/logos/workplace-safety-and-insurance-board-wsib_light.svg" alt="WSIB">
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Val Maizelev — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const html = document.documentElement;
+    const btn = document.getElementById('theme-toggle');
+    if(btn){ btn.addEventListener('click', ()=>{
+      const isDark = html.getAttribute('data-theme')==='dark';
+      if(isDark) html.removeAttribute('data-theme'); else html.setAttribute('data-theme','dark');
+    });}
+  </script>
+</body>
+</html>
